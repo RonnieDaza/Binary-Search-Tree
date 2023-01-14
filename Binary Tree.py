@@ -59,3 +59,17 @@ def build_tree(elements):
         root.add_child(elements[i])
 
     return root
+
+if __name__ == "__main__":
+    nameLetters = ["R", "O", "N", "N", "I", "E", "D", "A", "Z", "A"]
+    letter_tree = build_tree(nameLetters)
+
+    print("R is in the list?", letter_tree.search("R"))
+    print("O is in the list?", letter_tree.search("O"))
+    print("N is in the list?", letter_tree.search("N"))
+ 
+    print("J is in the list?", letter_tree.search("J"))
+    print("L is in the list?", letter_tree.search("L"))
+    print("P is in the list?", letter_tree.search("P"))
+
+    print(letter_tree.in_order_traversal())
