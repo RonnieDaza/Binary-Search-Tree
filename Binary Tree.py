@@ -20,18 +20,18 @@ class BinarySearchTreeNode:
             else:
                 self.right = BinarySearchTreeNode(data)
         
-    def search(self, val):
-        if self.data == val:
-            return True
+    def in_order_traversal(self):
+        elements = []
+
+        # Visit left tree
+        if self.left:
+            elements += self.left.in_order_traversal()
         
-        if val < self.data:
-            if self.left:
-                return self.left.search(val)
-            else:
-                return False
+        # Visit base node
+        elements.append(self.data)
+
+        # Visit right tree
+        if self.right:
+            elements += self.right.in_order_traversal()
         
-        if val > self.data:
-            if self.right:
-                return self.right.search(val)
-            else:
-                return False
+        return elements
