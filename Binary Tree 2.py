@@ -89,3 +89,17 @@ def build_tree(elements):
         root.add_child(elements[i])
 
     return root
+
+
+if __name__ == "__main__":
+    letters_tree = build_tree(["R", "O", "N", "N", "I", "E", "D", "A", "Z", "A"])
+    letters_tree.delete("R")
+    print("After deleting R ", letters_tree.in_order_traversal())
+
+    letters_tree = build_tree(["R", "O", "N", "N", "I", "E", "D", "A", "Z", "A"])
+    letters_tree.delete("N")
+    print("After deleting N ", letters_tree.in_order_traversal())
+
+    letters_tree = build_tree(["R", "O", "N", "N", "I", "E", "D", "A", "Z", "A"])
+    letters_tree.delete("A")
+    print("After deleting A ", letters_tree.in_order_traversal())
