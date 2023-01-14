@@ -3,3 +3,8 @@ class BinarySearchTreeNode:
         self.data = data
         self.left = None
         self.right = None
+    
+    def add_child(self, data):
+        # Add data to left subtree
+        if data == self.data:
+            return
